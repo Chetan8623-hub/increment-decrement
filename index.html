@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Cart </title>
+
+    <style>
+        .card{
+            align-items: center;
+            width: 250px;
+            background-color: #dfd4d4;
+            border: 2px solid black;
+            border-radius: 30px;
+        }
+        .img{
+            height: 200px;
+            display: block;
+            margin: 10px auto;
+
+        }
+        .title{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .price{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .btn-buy-now{
+            background-color: #0c0b0b;
+            color: white;
+            border: none;
+            padding: 5px 20px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .icon{
+            height: 25px;
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+        .quantity-card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="card">
+        <img src="car.jpg" class="img">
+        <h3 class="title">Toy Car</h3>
+        <p class="price">Price : 250/-</p>
+    <div class="quantity-card">
+        <img src="remove.png" class="icon" onclick="minus()">
+        <span id="quantity">1</span>
+        <img src="add.png" class="icon" onclick="plus()">
+    </div>
+        <button class="btn-buy-now">Buy Now</button>
+    </div>
+
+    <script>
+        const contelement = document.getElementById('quantity');
+
+            function plus(){
+            let quantity = parseInt(contelement.innerText);
+            contelement.innerText = ++quantity}
+
+            function minus(){
+            let quantity = parseInt(contelement.innerText);
+            if(quantity>1){
+                contelement.innerText = --quantity}}
+        </script>
+        
+</body>
+</html>
